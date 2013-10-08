@@ -1,0 +1,8 @@
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+html{
+    line-height:#{$line-height-ratio};
+    overflow-y:scroll;
+    min-height:100%;
+}

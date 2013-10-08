@@ -1,0 +1,7 @@
+*~
+.DS_Store
+mysql-config.php
+delete
+node_modules
+*.project-workspace
+*.sublime-workspace

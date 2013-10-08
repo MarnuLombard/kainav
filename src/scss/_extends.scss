@@ -1,0 +1,15 @@
+.center {
+	float: none;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.clearfix {
+	&:after{
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
