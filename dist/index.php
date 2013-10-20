@@ -11,6 +11,20 @@
 
 	<?php include_once 'static/nav.php'; ?>
 
+	<section class="slider__index slider--wrapper">
+		<ul class="slides">
+			<li class="slider--item cheetah">
+				<h2 class="slider--text">A tagline or something goes here. Perhaps a slogan.</h2>
+			</li>
+			<li class="slider--item dolphin">
+				<h2 class="slider--text">A tagline or something goes here. Perhaps a slogan.</h2>
+			</li>
+			<li class="slider--item turtle">
+				<h2 class="slider--text">A tagline or something goes here. Perhaps a slogan.</h2>
+			</li>
+		</ul>
+	</section> <!-- //slider-wrapper -->
+
 	<section class="main" role="main">
 
 		<div class="text g">

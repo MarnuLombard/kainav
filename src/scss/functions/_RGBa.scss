@@ -1,3 +1,0 @@
-@function trans($color, $percentage, $shade) {
- @return lighten($color, (1-$percentage)*5%);
-}

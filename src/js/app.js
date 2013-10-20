@@ -1,15 +1,17 @@
 $(document).ready(function() {
 
-// Swap out pngs if svg is not supported
-	if (Modernizr.inlinesvg) {
+// Swap out svg if not supported
+	if (!Modernizr.inlinesvg) {
 		$('img').each(function() {
-			var $this = $(this);
-			var src = $this.attr("src").replace(".png", ".svg");
-			if (!$this.hasClass("no-svg")) {
-				$this.attr("src", src);
-		}
+			var src = $(this).attr("src").replace(".svg", ".png");
+				$(this).attr("src", src);
 		});
 	}
-//-->
+//--> svg swap
+//
+// Init  the glide js plugin
+
+
+//--> glide.js
 
 }); //docReady

@@ -1,25 +1,22 @@
-/*!
- *
-.||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
+// .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
 
-    .                                      '||            .           
-  .||.  .... ... ... ...    ....  ... ...   ||   ....   .||.    ....  
-   ||    '|.  |   ||'  || .|...||  ||'  ||  ||  '' .||   ||   .|...|| 
-   ||     '|.|    ||    | ||       ||    |  ||  .|' ||   ||   ||      
-   '|.'    '|     ||...'   '|...'  ||...'  .||. '|..'|'  '|.'  '|...' 
-        .. |      ||               ||                                 
-         ''      ''''             ''''      A Typographic Starter Kit            
-  
-  URL ........... http://typeplate.com
-  VERSION ....... 1.1.0
-  Github ........ https://github.com/typeplate/typeplate.github.io
-  AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
-  LICENSE ....... Creative Commmons Attribution 3.0
-  LICENSE URL ... http://creativecommons.org/licenses/by/3.0
+//     .                                      '||            .
+//   .||.  .... ... ... ...    ....  ... ...   ||   ....   .||.    ....
+//    ||    '|.  |   ||'  || .|...||  ||'  ||  ||  '' .||   ||   .|...||
+//    ||     '|.|    ||    | ||       ||    |  ||  .|' ||   ||   ||
+//    '|.'    '|     ||...'   '|...'  ||...'  .||. '|..'|'  '|.'  '|...'
+//         .. |      ||               ||
+//          ''      ''''             ''''      A Typographic Starter Kit
 
- .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
- *
- */
+//   URL ........... http://typeplate.com
+//   VERSION ....... 1.1.0
+//   Github ........ https://github.com/typeplate/typeplate.github.io
+//   AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+//   LICENSE ....... Creative Commmons Attribution 3.0
+//   LICENSE URL ... http://creativecommons.org/licenses/by/3.0
+
+//  .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
+
 
 
 
@@ -422,8 +419,8 @@ $dropcap-bg: transparent !default;
  *
  */
 
-// Use @include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg); 
-// to pass the following arguments below. Feel free to pass in custom 
+// Use @include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
+// to pass the following arguments below. Feel free to pass in custom
 // values for the variables we've provided.
 //
 // Make sure you add the class “drop-cap” to your markup in order to operate.

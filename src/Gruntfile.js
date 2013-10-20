@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     // watch for changes and trigger sass, concat, uglify and livereload
     watch: {
       sass: {
-        files: ['../src/scss/**/*', '../src/scss/*'],
+        files: ['scss/**/*', 'scss/*'],
         tasks: ['sass']
       },
       js: {

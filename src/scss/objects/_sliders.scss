@@ -1,0 +1,100 @@
+.slider {
+@at-root {
+		#{&}--wrapper {
+		@extend .center;
+		position: relative;
+		width: 100%;
+		height: 420px;
+		overflow: hidden;
+	}
+
+	#{&}--item {
+		width: 100vw;
+		display: table;
+		float: left;
+		clear: none;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+
+	// Automagically Set up a class name for each
+		@each $slider in $sliders {
+	    @at-root #{&}.#{$slider} {
+	        background-image: url(../img/sliders/sliders__#{$slider}.jpg);
+	    }
+		} // @each
+
+		.slider__index &{
+			height: $slider-height__index;
+		}// __index
+	}// slider--item
+
+	#{&}--text{
+		@extend %vertical-center;
+		position: relative;
+		color: white;
+
+		&:before {
+			width:100%;
+			height: 1.4em;
+			content: " ";
+			display: block;
+			position: absolute;
+			margin-top: -0.2em;
+			background-color: white;
+			@include opacity(0.55);
+		}
+	} // --text
+
+} // @at-root
+} // slider
+
+
+// The <ul> needed by glide.js
+.slides {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+
+	/* Simple clear fix */
+	overflow: hidden;
+
+	/**
+	 * Here is CSS transitions
+	 * responsible for slider animation in modern broswers
+	 */
+	-webkit-transition: all 800ms easeOut; // Older webkit
+	@include transition($slider-transition);
+}
+
+
+.slider-arrows {}
+
+.slider-arrow {
+	position: absolute;
+	display: block;
+	margin-bottom: -20px;
+	padding: 20px;
+}
+
+.slider-arrow--right { bottom: 50%; right: 30px; }
+.slider-arrow--left { bottom: 50%; left: 30px; }
+
+
+.slider-nav {
+	position: absolute;
+	bottom: 30px;
+}
+
+.slider-nav__item {
+	width: 12px;
+	height: 12px;
+	float: left;
+	clear: none;
+	display: block;
+	margin: 0 5px;
+	background: #fff;
+}
+
+.slider-nav__item:hover { background: #ccc; }
+.slider-nav__item--current { background: #ccc; }
