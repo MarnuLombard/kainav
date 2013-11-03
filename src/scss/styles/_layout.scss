@@ -1,6 +1,6 @@
 body * {
 	zoom: 1;
-	box-sizing: border-box;
+	@include box-sizing(border-box);
 }
 
 // to wrap all grid objects
@@ -16,16 +16,26 @@ section {
 	padding: 0;
 }
 
-.g,
-.grid {
+.grid__item {
 
 	.lt-ie8 & {
 		padding-left: 0.8%;
 	}
 
-	&.first-in-row {
-		padding-left: 0;
-	}
+}
+
+span.maxWidth{
+	@extend %maxWidth;
+	@extend .clearfix;
+	padding: 20px;
+	display: block;
+}
+
+// apply this to a grid__item
+.extra-padding {
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+
 }
 
 //these are little margin-top magic number hacks
@@ -48,4 +58,3 @@ section {
 .mt100	{margin-top: 100px;}
 .mt150	{margin-top: 150px;}
 .mt200	{margin-top: 200px;}
-

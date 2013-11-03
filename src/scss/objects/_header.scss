@@ -1,0 +1,17 @@
+.header--main {
+	@extend .clearfix;
+	margin: 0 auto;
+	padding: 5px 25px;
+	text-align: center;
+
+	.logo__header--wrapper {
+		@include breakpoint(1100px) {
+			float: left;
+		}
+	}
+
+	.logo {
+		width: 250px;
+		height: auto;
+	}
+}

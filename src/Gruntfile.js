@@ -8,21 +8,48 @@ module.exports = function(grunt) {
 
     // watch for changes and trigger sass, concat, uglify and livereload
     watch: {
+
+      icons: {
+        files: ['icons/*.svg'],
+        tasks: ['webfont']
+      },
       sass: {
         files: ['scss/**/*', 'scss/*'],
         tasks: ['sass']
       },
       js: {
         files: [
-          '../src/Gruntfile.js',
-          '../src/js/*',
-          '../src/js/**/*'
+          'Gruntfile.js',
+          'js/*',
+          'js/**/*'
         ],
         tasks: ['concat', 'uglify']
       },
+      /*fonts: {
+        files: ['icons/*'],
+        tasks: ['grunticon']
+      },*/
       livereload: {
         options: { livereload: true },
-        files: ['../dist/*', '../dist/**/*', '../dist/***/**/*']
+        files: [
+          '../dist/css/*',
+          '../dist/js/*',
+          '../dist/*.php',
+          '../dist/includes/**/*.php'
+        ]
+      }
+    },
+
+    // To generate the icon fonts from the files in my ./src/icons/ directory
+    webfont: {
+      icons: {
+        src: "icons/*.svg",
+        dest: "../dist/fonts",
+        options: {
+          hashes: false,
+          htmlDemo: false,
+          stylesheet: "scss"
+        }
       }
     },
 
@@ -34,7 +61,7 @@ module.exports = function(grunt) {
           style: 'compressed',
           precision: '2',
           compass: true,
-          cache: '../src/delete/'
+          cache: 'delete/'
         },
         files: {
           '../dist/css/style.css':'scss/style.scss',
@@ -48,7 +75,7 @@ module.exports = function(grunt) {
       ie: {
         files: {
           '../dist/js/ie.min.js': [
-            '../src/js/ie/*'
+            'js/ie/*'
           ]
         }
       }
@@ -59,15 +86,15 @@ module.exports = function(grunt) {
       script: {
         files: {
           '../dist/js/script.min.js': [
-            '../src/js/vendor/*',
-            '../src/js/plugins/*'
+            'js/vendor/*',
+            'js/plugins/*'
           ]
         }
       },
       app: {
         files: {
           '../dist/js/app.min.js': [
-            '../src/js/app.js'
+            'js/app.js'
           ]
         }
       }

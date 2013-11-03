@@ -1,0 +1,63 @@
+// Heavily editted, but sourced from http://mattbango.com/notebook/code/hover-zoom-effect-with-jquery-and-css/
+// http://css-tricks.com/rgba-browser-support/
+
+.thumbnails {
+	padding-bottom: 2em;
+}
+
+.thumbnail {
+	@at-root {
+
+		#{&}--wrapper {
+		  padding: 100% 0 0;
+	    max-height: 420px;
+	    margin: 0;
+	    overflow: hidden;
+	    position: relative;
+		} // wrapper
+
+		#{&}--link {
+			width: 100%;
+	    position: absolute;
+	    top: 0;
+	    text-decoration: none;
+		}
+
+		#{&}--image {
+	    height: 110%;
+	    margin-left: -5%;
+	    margin-top: -5%;
+	    width: 110%;
+		}
+
+		#{&}--caption {
+	    width: 100%;
+			color: #fff;
+	    text-align: center;
+
+	    .js & {
+	    	height: 100%;
+		    display: table;
+		    position: absolute;
+		    z-index: 100;
+				background-color: #7222222;
+		    background-color: rgba(#111, 0.6);
+
+				@include text-shadow(#000 0px 0px 20px);
+				@include opacity(0);
+
+
+				p {
+					@include vertical-center;
+				}
+
+				.lt-ie9 & {
+					// http://stackoverflow.com/questions/7664107/jquery-animating-opacity-in-ie8
+					filter:inherit
+				}
+			} // js &
+
+		}// caption
+
+	} //@root
+} // thumbnail

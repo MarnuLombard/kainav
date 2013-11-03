@@ -1,0 +1,43 @@
+// A list containing all of the colors set up in _color-vars.scss
+$section-colors : (
+	'primary' $color-primary,
+	// 'primary_Xlight' $color-primary_Xlight,
+	'primary_light' $color-primary_light,
+	'primary_dark' $color-primary_dark,
+	// 'primary_Xdark' $color-primary_Xdark,
+	'secondary' $color-secondary,
+	'secondary_Xlight' $color-secondary_Xlight,
+	'secondary_light' $color-secondary_light,
+	'secondary_dark' $color-secondary_dark,
+	'secondary_Xdark' $color-secondary_Xdark,
+	'grey' $color-grey,
+	'grey_Xlight' $color-grey_Xlight,
+	'grey_lighter' $color-grey_lighter,
+	'grey_light' $color-grey_light,
+	'grey_dark' $color-grey_dark,
+	'grey_Xdark' $color-grey_Xdark,
+	'alert' $color-alert,
+	'success' $color-success,
+	'highlight' $color-highlight,
+	'text' $color-text,
+	'headings' $color-headings
+);
+
+// A function to output a silent class (%classname) for each of the $color-foo variables
+@each $section-color in $section-colors {
+	$section-color--class : nth($section-color, 1);
+	$section-color--color : nth($section-color, 2);
+	%#{$section-color--class} {
+		background-color: #{$section-color--color};
+	}
+}
+
+
+section {
+	@at-root {
+		// Then we extend the silent classes into our outputted css
+		#{&}.grey_dark {
+			@extend %grey_dark;
+		}
+	}
+} // section

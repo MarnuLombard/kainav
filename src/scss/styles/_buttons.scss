@@ -1,0 +1,14 @@
+.button {
+	@include transition(background-color 0.3s ease-in);
+
+	@at-root {
+		#{&}__pill {
+			@include sassy-button-structure(4px, 1.2em, 0.2em 0.8em);
+			@include sassy-button-gradient('flat', lighten($color-primary, 3%), lighten($color-primary, 3%), white, 'none');
+		}
+
+		#{&}a {
+			display: block;
+		}
+	}//@root
+}

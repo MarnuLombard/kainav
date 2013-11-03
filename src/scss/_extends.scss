@@ -1,9 +1,10 @@
-.center {
+@mixin center {
 	float: none;
 	margin-right: auto;
 	margin-left: auto;
-	text-align: center;
 }
+
+.center {@include center}
 
 .clearfix {
 	&:after{
@@ -13,3 +14,18 @@
 	}
 }
 
+.screenreader {
+	font: #{0/0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+%maxWidth {
+	max-width: 1400px;
+
+	@include breakpoint(1400px){
+		@include center;
+	}
+}

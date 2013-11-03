@@ -4,7 +4,7 @@
 		@extend .center;
 		position: relative;
 		width: 100%;
-		height: 420px;
+		height: 550px;
 		overflow: hidden;
 	}
 
@@ -33,6 +33,21 @@
 		@extend %vertical-center;
 		position: relative;
 		color: white;
+		font-size: 2em;
+		text-align: center;
+
+		@include breakpoint(min-width 1300px){
+			font-size: 2.5em;
+		}
+
+		@include breakpoint(max-width 1000px){
+			&:before {
+				height: 2.4em !important;
+			}
+		}
+
+
+
 
 		&:before {
 			width:100%;
@@ -52,7 +67,7 @@
 
 // The <ul> needed by glide.js
 .slides {
-	height: 100%;
+	// height: 100%;
 	padding: 0;
 	margin: 0;
 
@@ -63,27 +78,34 @@
 	 * Here is CSS transitions
 	 * responsible for slider animation in modern broswers
 	 */
-	-webkit-transition: all 800ms easeOut; // Older webkit
+	// -webkit-transition: all 600ms easeOut; // Older webkit (if i use cubic-bezier with ranges that are out of value)
 	@include transition($slider-transition);
 }
 
 
-.slider-arrows {}
+.slider-arrows {
+
+}
 
 .slider-arrow {
 	position: absolute;
 	display: block;
-	margin-bottom: -20px;
-	padding: 20px;
+	bottom: 4%;
 }
 
-.slider-arrow--right { bottom: 50%; right: 30px; }
-.slider-arrow--left { bottom: 50%; left: 30px; }
+.slider-arrow--right {
+	right: 10px;
+}
+
+.slider-arrow--left {
+	left: 10px;
+}
 
 
 .slider-nav {
 	position: absolute;
-	bottom: 30px;
+	bottom: 20px;
+	@include opacity(0.5);
 }
 
 .slider-nav__item {
@@ -93,8 +115,11 @@
 	clear: none;
 	display: block;
 	margin: 0 5px;
-	background: #fff;
+	background: $color-secondary;
+	@include border-radius(50%);
 }
 
-.slider-nav__item:hover { background: #ccc; }
-.slider-nav__item--current { background: #ccc; }
+.slider-nav__item:hover,
+.slider-nav__item--current {
+	background: $color-primary;
+}
