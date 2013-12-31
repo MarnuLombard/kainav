@@ -1,12 +1,13 @@
 .nav {
 	@at-root {
 		.header #{&} {
-			display: table;
+			margin-top: 20px;
+			/* display: table;
 			height: 150px;
-			float: right;
+			float: right; */
 
 			span {
-				@extend %vertical-center;
+				// @extend %vertical-center;
 				padding-left: 30px;
 			}
 
