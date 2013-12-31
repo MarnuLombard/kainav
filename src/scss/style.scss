@@ -2,39 +2,19 @@
 /*------------------------------------*\
     STYLE.CSS
 \*------------------------------------*/
-// Compass
 @import "compass/support";
 @import "compass/css3";
 
-// Vars
+// Functionals
 @import "vars";
 
 // Libraries
-@import "libs/breakpoint";
-@import "libs/sassy-buttons";
-@import "libs/normalize";
-@import "libs/csswizardry-grids";
-@import "libs/typeplate";
-
-// Functionals
+@import "libs/*";
+@import "mixins/*";
 @import "extends";
-@import "mixins";
 
 // Styles
-@import "styles/buttons";
-@import "styles/color";
-@import "styles/forms";
-@import "styles/icons";
-@import "styles/layout";
-@import "styles/lists";
-@import "styles/media";
-@import "styles/typography";
+@import "styles/*";
 
 // Objects
-@import "objects/footer";
-@import "objects/header";
-@import "objects/magnific";
-@import "objects/navs";
-@import "objects/partials";
-@import "objects/sliders";
-@import "objects/thumbnails";
+@import "objects/*";

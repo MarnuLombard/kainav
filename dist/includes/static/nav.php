@@ -1,14 +1,8 @@
-<header class="section" role="banner">
-	<a href="/" tite="home">
-		<img src="img/logo.svg" alt="KaiNav Conservation Foundation" class="float--left">
-	</a>
-
-	<nav class="nav" role="navigation">
-		<span class="nav_link--wrapper">
-			<a href="about" class="nav_link">About us</a>
-			<a href="projects" class="nav_link">Current projects</a>
-			<a href="centers" class="nav_link">Research centers</a>
-			<a href="contact" class="nav_link">Contact us</a>
-		</span>
-	</nav>
-</header>
+<nav class="nav nav--main" role="navigation">
+	<span><a href="/about" class="nav_link">About&nbsp;us</a></span>
+	<span><a href="/projects" class="nav_link">Current&nbsp;projects</a></span>
+  <span><a href="/centers" class="nav_link">Research&nbsp;centers</a></span>
+  <span><a href="/get_involved" class="nav_link">Get&nbsp;involved</a></span>
+  <span><a href="/sponsors" class="nav_link">Our&nbsp;sponsors</a></span>
+	<span><a href="/contact" class="nav_link">Contact&nbsp;us</a></span>
+</nav>

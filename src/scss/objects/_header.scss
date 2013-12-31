@@ -5,13 +5,13 @@
 	text-align: center;
 
 	.logo__header--wrapper {
-		@include breakpoint(1100px) {
+		@include breakpoint(1185px) {
 			float: left;
 		}
 	}
 
 	.logo {
-		width: 250px;
+		width: 340px;
 		height: auto;
 	}
 }

@@ -1,5 +1,6 @@
 <?php
 	ob_start();
+  // session_start();
 
 
 	foreach (glob($_SERVER['DOCUMENT_ROOT'].'/includes/classes/*.class.php') as $class_filename){

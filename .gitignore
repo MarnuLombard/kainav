@@ -5,3 +5,5 @@ delete
 node_modules
 *.project-workspace
 *.sublime-workspace
+dist/projects/
+sftp-config.json

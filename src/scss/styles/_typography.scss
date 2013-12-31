@@ -2,11 +2,11 @@
 /* 	Import fonts	*/
 /* ---------------- */
 
-@include font-face('Raleway-SemiBold');
-@include font-face('Raleway-Thin');
-@include font-face('OpenSans-Regular');
-@include font-face('OpenSans-Light');
-@include font-face($font-icons);
+@include font-face('Raleway-SemiBold', 'http://kainavconservation.co.za/fonts/');
+@include font-face('Raleway-Thin', 'http://kainavconservation.co.za/fonts/');
+@include font-face('OpenSans-Regular', 'http://kainavconservation.co.za/fonts/');
+@include font-face('OpenSans-Light', 'http://kainavconservation.co.za/fonts/');
+@include font-face($font-icons, 'http://kainavconservation.co.za/fonts/');
 
 
 /* ---------------- */
@@ -69,5 +69,12 @@ a:visited {
 }
 a:hover {
 	text-decoration: none;
+}
+
+.lead {
+	font-size: 19.2px;
+	font-size: 1.2rem;
+	font-family: $font-headings_thin;
+	@include text-shadow(0 0 0 #000);
 }
 

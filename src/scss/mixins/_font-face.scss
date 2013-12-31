@@ -2,7 +2,7 @@
 /* ==============[ Bulletproof fontface mixin ]============== */
 
 //	Created by Marnu Lombard
-//	V2.0
+//	V2.1
 //	github.com/MarnuLombard
 //
 //	Based on Paul Irish's "Bulletproof @fontface"
@@ -13,23 +13,23 @@
 
 // ---------------------------------------------------------- //
 
-@mixin font-face($name) {
+@mixin font-face($name, $directory: '../fonts') {
 
 	@font-face {
 		font-family: quote($name);
-		src: url('../fonts/#{$name}.eot');
+		src: url('#{$directory}/#{$name}.eot');
 		src: local('?'),
-		 url('../fonts/#{$name}.woff') format("woff"),
-		 url('../fonts/#{$name}.ttf') format("truetype"),
-		 url('../fonts/#{$name}.svg##{$name}') format("svg");
+		 url('#{$directory}/#{$name}.woff') format("woff"),
+		 url('#{$directory}/#{$name}.ttf') format("truetype"),
+		 url('#{$directory}/#{$name}.svg##{$name}') format("svg");
 	}
 
 	@media screen and (max-device-width: 480px) {
 		@font-face {
 			font-family: quote($name);
-			src: url('../fonts/#{$name}.woff') format("woff"),
-			 url('../fonts/#{$name}.ttf') format("truetype"),
-			 url('../fonts/#{$name}.svg##{$name}') format("svg");
+			src: url('#{$directory}/#{$name}.woff') format("woff"),
+			 url('#{$directory}/#{$name}.ttf') format("truetype"),
+			 url('#{$directory}/#{$name}.svg##{$name}') format("svg");
 		}
 
 	}

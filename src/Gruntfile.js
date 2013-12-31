@@ -25,10 +25,6 @@ module.exports = function(grunt) {
         ],
         tasks: ['concat', 'uglify']
       },
-      /*fonts: {
-        files: ['icons/*'],
-        tasks: ['grunticon']
-      },*/
       livereload: {
         options: { livereload: true },
         files: [
@@ -61,11 +57,17 @@ module.exports = function(grunt) {
           style: 'compressed',
           precision: '2',
           compass: true,
+          require: 'sass-globbing',
           cache: 'delete/'
         },
         files: {
+           // The default stylesheet
           '../dist/css/style.css':'scss/style.scss',
-          '../dist/css/no-mq.css':'scss/no-mq.scss'
+           // For browsers not supporting @media
+          '../dist/css/no-mq.css':'scss/no-mq.scss',
+           // For the /projects directory -- running Anchor
+          '../dist/projects/themes/kainav/css/style.css':'scss/anchor-style.scss'
+
         }
       }
     },
@@ -95,6 +97,13 @@ module.exports = function(grunt) {
         files: {
           '../dist/js/app.min.js': [
             'js/app.js'
+          ]
+        }
+      },
+      map : {
+        files: {
+          '../dist/js/map.min.js': [
+            'js/map.js'
           ]
         }
       }

@@ -613,8 +613,8 @@ p {
 	margin: auto auto $indent-val;
 	& + p {
 		//siblings indentation
-		text-indent: $indent-val;
-		margin-top: -$indent-val;
+		/* text-indent: $indent-val;
+		margin-top: -$indent-val; */
 	}
 }
 

@@ -1,0 +1,15 @@
+#map {
+	width: 100%;
+	min-height: 300px;
+
+}
+
+
+.sponsors_grid {
+  width: 100%;
+  display: table;
+  margin-left: -24px;
+}
+.sponsors_img {
+  @extend %vertical-center;
+}

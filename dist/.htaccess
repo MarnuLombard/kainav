@@ -35,6 +35,12 @@
   RewriteEngine On
 </IfModule>
 
+# Rewrite the urls that  have no file extentions
+# ie. hostname.com/index goes to hostname.com/index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+)$ $1.php [L,QSA]
+
 #svg images
 AddType     image/svg+xml              svg svgz
 AddEncoding gzip                       svgz

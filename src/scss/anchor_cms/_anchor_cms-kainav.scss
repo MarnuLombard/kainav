@@ -1,0 +1,44 @@
+/**
+ * Custom styles for the kainav theme
+ */
+
+li.secondary_post {
+  background-color: $color-primary_dark;
+  a {
+    color: darken(white, 10%);
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+
+ol, ul{
+  padding-left: 0;
+}
+
+.wrap {
+  width: 80%;
+  @extend .center;
+  @extend %maxWidth;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#top ul{
+  img {
+    margin-left: 20px;
+  }
+}
+
+.menu-title {
+  font-size: $base-font-size;
+}
+
+h1 a {
+  color: $color-headings;
+}

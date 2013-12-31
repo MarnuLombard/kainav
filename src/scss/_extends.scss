@@ -4,7 +4,9 @@
 	margin-left: auto;
 }
 
-.center {@include center}
+.center {
+	@include center;
+}
 
 .clearfix {
 	&:after{
@@ -28,4 +30,8 @@
 	@include breakpoint(1400px){
 		@include center;
 	}
+}
+
+.vertical-center {
+  @include vertical-center;
 }
