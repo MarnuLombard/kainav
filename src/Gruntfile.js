@@ -6,6 +6,9 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    //define vars
+    var src = '../user/themes/kainav/assets',
+
     // watch for changes and trigger sass, concat, uglify and livereload
     watch: {
 
@@ -28,10 +31,10 @@ module.exports = function(grunt) {
       livereload: {
         options: { livereload: true },
         files: [
-          '../dist/css/*',
-          '../dist/js/*',
-          '../dist/*.php',
-          '../dist/includes/**/*.php'
+          '<%= dist %>/css/*',
+          '<%= dist %>/js/*',
+          '<%= dist %>/*.php',
+          '<%= dist %>/includes/**/*.php'
         ]
       }
     },
@@ -40,7 +43,7 @@ module.exports = function(grunt) {
     webfont: {
       icons: {
         src: "icons/*.svg",
-        dest: "../dist/fonts",
+        dest: "<%= dist %>/fonts",
         options: {
           hashes: false,
           htmlDemo: false,
@@ -62,11 +65,11 @@ module.exports = function(grunt) {
         },
         files: {
            // The default stylesheet
-          '../dist/css/style.css':'scss/style.scss',
+          '<%= dist %>/css/style.css':'scss/style.scss',
            // For browsers not supporting @media
-          '../dist/css/no-mq.css':'scss/no-mq.scss',
+          '<%= dist %>/css/no-mq.css':'scss/no-mq.scss',
            // For the /projects directory -- running Anchor
-          '../dist/projects/themes/kainav/css/style.css':'scss/anchor-style.scss'
+          '<%= dist %>/projects/themes/kainav/css/style.css':'scss/anchor-style.scss'
 
         }
       }
@@ -76,7 +79,7 @@ module.exports = function(grunt) {
     concat: {
       ie: {
         files: {
-          '../dist/js/ie.min.js': [
+          '<%= dist %>/js/ie.min.js': [
             'js/ie/*'
           ]
         }
@@ -87,7 +90,7 @@ module.exports = function(grunt) {
     uglify: {
       script: {
         files: {
-          '../dist/js/script.min.js': [
+          '<%= dist %>/js/script.min.js': [
             'js/vendor/*',
             'js/plugins/*'
           ]
@@ -95,14 +98,14 @@ module.exports = function(grunt) {
       },
       app: {
         files: {
-          '../dist/js/app.min.js': [
+          '<%= dist %>/js/app.min.js': [
             'js/app.js'
           ]
         }
       },
       map : {
         files: {
-          '../dist/js/map.min.js': [
+          '<%= dist %>/js/map.min.js': [
             'js/map.js'
           ]
         }

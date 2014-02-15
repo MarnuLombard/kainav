@@ -1,9 +1,14 @@
 *~
 .DS_Store
-mysql-config.php
 delete
 node_modules
 *.project-workspace
 *.sublime-workspace
-dist/projects/
 sftp-config.json
+old/*
+
+# Some Habari files
+config.php
+dist/user/habari.db
+dist/config.php
+*/config.php
