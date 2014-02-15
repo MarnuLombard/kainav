@@ -1,3 +1,14 @@
+# block attempts to connect untill launch
+AuthName "Restricted Area"
+AuthType Basic
+AuthUserFile /home/marnul0/.htpasswds/.htpasswd
+AuthGroupFile /dev/null
+require valid-user
+# ---------------------------------------------------------------------
+
+
+
+
 # ---------------------------------------------------------------------
 # Got most of this from the h5bp .htaccess file
 #   https://github.com/h5bp/html5-boilerplate/blob/master/.htaccess
@@ -36,7 +47,7 @@
 </IfModule>
 
 # Rewrite the urls that  have no file extentions
-# ie. hostname.com/index goes to hostname.com/index.php
+# ie. hostname.com/index goes to hostname.com/index.PHP
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.+)$ $1.php [L,QSA]
