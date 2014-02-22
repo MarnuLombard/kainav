@@ -7,8 +7,12 @@ node_modules
 sftp-config.json
 old/*
 
-# Some Habari files
-config.php
-dist/user/habari.db
-dist/config.php
-*/config.php
+# Some laravel config files
+*/database.php
+/dist/config
+/vendor
+/bootstrap/compiled.php
+composer.phar
+composer.lock
+.env.local.php
+.env.php
