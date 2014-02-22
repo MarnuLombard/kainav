@@ -1,0 +1,255 @@
+@import 'compass';
+@import 'normalize';
+@import 'base';
+@import 'typography';
+@import 'layout';
+
+
+
+/*.pane {
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+}*/
+	
+header {
+
+	padding: 0;
+	position: relative;
+	
+	> a {
+		text-decoration: none;
+	}
+	
+	hgroup {
+		
+		h1, h2 {
+			font-weight: 400;
+			margin: 0;
+			line-height: .7em;
+			padding: 0;
+		}
+
+		h1 {
+			font-size: 2.52em;
+		}
+
+		h2 {
+			font-family: 'PT Sans', sans-serif;
+			font-size: .64em;
+			text-transform: uppercase;
+			padding: .3em 0;
+			font-style: normal;
+		}
+	}
+
+}
+
+
+	
+nav[role=main] {
+	position: fixed;
+	top: 12em;
+	left: 0;
+	max-width: $page-left-margin - 1em;
+	padding: 0;
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	
+	@media screen and (max-height: $break-height-medium) {
+		top: 5.5em;
+	}
+	
+	@media screen and (max-width: $break-width-medium) {
+		position: relative;
+		top: auto; 
+		left: auto;
+		max-width: auto;
+		margin: 2em 0;
+		float: right;
+	}
+
+	ol {
+		margin: 0; 
+		padding: 0;
+		position: relative;
+		font-size: .6em;
+		line-height: 1.5em;
+
+		li {
+			list-style: none;
+			margin:0;
+			padding: 0 1em;
+			border-left: 0.25em solid transparent;
+			
+			@media screen and (max-width: $break-width-medium) {
+				border: none;
+				padding: 0;
+			}
+			
+			&.active {
+				border-color: $highlight-color;
+				
+			}
+			
+			a {
+				text-decoration: none;
+				@include link-colors($lowlight-color, $highlight-color, $highlight-color, $lowlight-color, $highlight-color);
+			}
+		}
+	}
+}
+
+@mixin meta {
+	text-transform: uppercase;
+	font-size: .7em;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.pubdata {
+	@include meta;
+	color: $lowlight-color;
+	a {
+		@include link-colors($lowlight-color, $highlight-color, $highlight-color, $lowlight-color, $highlight-color);
+		text-decoration: none;
+	}
+}
+
+.pagenav a,
+a[rel=tag] {
+	@include meta;
+	margin-right: .5em;
+	text-decoration: none;
+	@include link-colors($lowlight-color, $highlight-color, $highlight-color, $lowlight-color, $highlight-color);
+}
+
+@mixin post-time {
+	width: $page-left-margin;
+	position: absolute;
+	left: -$page-left-margin - 1em;
+	text-align: right;
+	text-transform: uppercase;
+	font-family: 'PT Sans', sans-serif;
+	font-size: .6em;
+	top: 0.1em;
+	color: $lowlight-color;
+}
+
+div.multiple {
+	
+	clear: both;
+	
+	@media screen and (max-width: $break-width-medium) {
+		margin-left: 0;
+	}
+	
+	> ol {
+		margin: 0;
+		padding: 0;
+		
+		>li.post {
+			
+			position: relative;
+			list-style: none;
+			margin-bottom: 0.5em;
+			@include clearfix;
+			
+			time {
+				@include post-time;
+				
+				@media screen and (max-width: $break-width-medium) {
+					left: auto;
+					text-align: left;
+				}
+				
+				@media screen and (max-width: $break-width-small) {
+					position: relative;
+				}
+			}
+			
+			>span {
+				@media screen and (max-width: $break-width-medium) {
+					margin-left: 7em;
+					display: block;
+				}
+				
+				@media screen and (max-width: $break-width-small) {
+					margin-left: 0;
+				}
+			}
+			
+			span.author {
+				display: none;
+				@include inline-block;
+			}
+		}
+	}
+}
+
+hr {
+	background: $highlight-color;
+	color: $highlight-color;
+	width: 2em;
+	height: 1px;
+	border: 0;
+	text-align: left;
+	margin: 2.5em 0;
+}
+
+.content {
+		
+	.multiple {
+		margin-left: -$page-left-margin;
+	}
+	
+	img {
+		max-width: 100%;
+	}
+}
+
+article {
+	clear: both;
+	max-width: 60em;
+	header {
+		margin: 0;
+		
+		h1 {
+			@include adjust-font-size-to(55px);
+			line-height: 1em;
+			margin-bottom: .3em;
+			
+			@media all and (max-width: $break-width-medium), all and (max-height: $break-height-medium)  {
+				@include adjust-font-size-to(40px);
+				line-height: 1em;
+				margin-bottom: .3em;
+			}
+			
+			@media all and (max-width: $break-width-small){
+				@include adjust-font-size-to(28px);
+				line-height: 1em;
+				margin-bottom: .3em;
+			}
+		}
+		
+		time {
+			@include post-time;
+			top: 0;
+			margin-top: 3.3em;
+		}
+		
+	}
+}
+
+ol.footnotes {
+	color: $lowlight-color;
+	@include adjust-font-size-to(14px);
+	line-height: 1.6em;
+	li {
+		/*margin-bottom: .3em;*/
+	}
+}
+
+footer {
+	margin-bottom: 2em;
+}

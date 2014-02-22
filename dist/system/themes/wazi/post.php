@@ -12,11 +12,7 @@
 	</header>
 
 	<div class="content" itemprop="articleBody">
-		<?php if($request->display_entry): ?>
-			<?php echo $content->content_out; ?>
-		<?php else: ?>
-			<?php echo $content->content_excerpt; ?>
-		<?php endif; ?>
+	<?php echo $content->content_out; ?>
 	</div>
 
 	<?php if($request->display_entry): ?>

@@ -778,7 +778,7 @@ class Post extends QueryRecord implements IsContent, FormStorage
 		}
 
 		$this->status = Post::status( 'published' );
-		$result = $this->update( true );
+		$result = $this->update( false );
 		EventLog::log( $msg, 'info', 'content', 'habari' );
 
 		// and call any final plugins

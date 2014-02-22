@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pluggable type="plugin">
+	<name>Facebook Comments</name>
+	<license url="http://www.apache.org/licenses/LICENSE-2.0.html">Apache Software License 2.0</license>
+	<author url="http://blog.bcse.tw/">Joel Lee</author>
+	<version>0.1</version>
+	<url>http://code.google.com/p/bcse/wiki/FacebookComments</url>
+	<description><![CDATA[A simple block allows free text.]]></description>
+	<copyright>2011</copyright>
+	<guid>BC5EEA71-8724-42F3-BA55-027FE4DF703F</guid>
+</pluggable> 

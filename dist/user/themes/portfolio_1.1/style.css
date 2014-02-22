@@ -1,0 +1,231 @@
+@import url(http://fonts.googleapis.com/css?family=Quattrocento);
+
+html, body, #wrapper, #imagebox, h1 {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	font-size: 16px;
+	font-family: Quattrocento, serif;
+}
+
+body {
+	background-color: #000;
+	color: #ddd;
+}
+
+a {
+	text-decoration: underline;
+	color: #ddd;
+}
+
+img {
+	border: 0;
+}
+
+#wrapper {
+	min-height: 100%;
+}
+
+#header {
+	width: 100%;
+	min-height: 150px;
+	background-color: #222;
+	text-align: center;
+}
+#homelogo img {
+	margin-top: 10px;
+	height: 180px;
+}
+
+#menu {
+	width: 100%;
+	height: 43px;
+	background-color: #111;
+}
+
+#imagebox {
+	width:100%;
+	padding:30px 0 50px 0;
+}
+
+.contentarea {
+	background-color: #222;
+	padding: 30px;
+}
+
+.single {
+	padding: 30px 50px 50px 50px;
+	color: #eee;
+}
+
+.ownerline {
+	font-size: 16pt;
+	line-height: 20pt;
+	margin-top: 20px;
+}
+
+#stickyfooter {
+	width:100%;
+	position:relative;
+	margin-top:-50px;
+	height:50px;
+	color: #eee;
+	clear:both;
+}
+
+/* Menu plugin styles */
+#menu ol {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+#menu ol li {
+	min-width: 80px;
+	text-align: center;
+	display: inline-block;
+}
+
+#menu ol li a {
+	display: inline-block;
+	color: #ccc;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px 20px;
+	height: 23px;
+}
+
+#menu ol li.active a{
+	background-color:#222;
+}
+
+/* Style multiple post */
+
+.post {
+	height:280px;
+	width:280px;
+	margin:0 0 20px 30px;
+	display:inline-block;
+	float:left;
+	text-align:center;
+	line-height:280px;
+	background-color: #222;
+}
+
+.post .contentpreview {
+	max-width:260px;
+	max-height:260px;
+	vertical-align:middle;
+	display:inline-block;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	word-wrap:break-word;
+	line-height:260px;
+}
+
+.post .contentpreview iframe {
+	max-width: 260px;
+}
+
+.post .contentpreview h2, .post .contentpreview .contentpreview_content {
+	line-height: normal;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.post .contentpreview a {
+	text-decoration: none;
+}
+
+.post .contentpreview h2 {
+	font-size: 18px;
+	vertical-align: top;
+}
+
+.post.entry .contentpreview .contentpreview_center {
+	vertical-align: middle;
+	line-height: 240px;
+	margin: 0;
+}
+
+.post .contentpreview .contentpreview_center .contentpreview_content {
+	display: inline-block;
+}
+
+/* Photos in multiple elements */
+
+.post .contentpreview .setphoto {
+	vertical-align: middle;
+	margin: 0;
+	line-height: 260px;
+}
+
+.post .contentpreview img {
+	max-width: 260px;
+	max-height: 260px;
+	vertical-align: middle;
+}
+
+/* Shrink photos in multiple photosets a bit more to make room for the title */
+
+.post.photoset .contentpreview .setphoto {
+	line-height: 240px;
+}
+
+.post.photoset .contentpreview .setphoto img {
+	max-height: 230px;
+}
+
+/* Style single post */
+
+/* Single Photoset */
+
+#photonavigator {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 120px;
+	background-color: #222;
+	text-align: center;
+	overflow: hidden;
+}
+
+#navigation {
+	float: left;
+	padding: 0 15px 0 20px;
+}
+
+#photonavigator .navigate {
+	text-decoration: none;
+	font-size: 48px;
+	color: #ccc;
+	display: inline-block;
+}
+
+#photonavigator .setphoto {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	height: 120px;
+	line-height: 120px;
+}
+
+#photonavigator .setphoto img {
+	margin: 0 10px 0 0;
+	padding: 0;
+	max-height: 100px;
+	vertical-align: middle;
+}
+
+.photoset {
+	text-align: center;
+}
+
+.photoset .setphoto img {
+	max-width: 1000px;
+	max-height: 650px;
+}

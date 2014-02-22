@@ -14,6 +14,7 @@
  *
  * @param string $class_name Class called by the user
  */
+
 function habari_autoload( $class_name )
 {
 	static $files = null;

@@ -730,7 +730,6 @@ class InstallHandler extends ActionHandler
 		}
 		$group->grant( 'post_entry', 'read' );
 		$group->grant( 'post_page', 'read' );
-		$group->deny( 'post_unpublished' );
 
 		// Add the anonymous user to the anonymous group
 		$group->add( 0 );

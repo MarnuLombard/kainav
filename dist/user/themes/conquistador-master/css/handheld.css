@@ -1,0 +1,16 @@
+@media screen and (max-width: 800px) {
+	nav.site form#searchform { position: static !important; }
+}
+
+@media screen and (max-width: 740px) {
+	p.pull-quote { margin-right: 0; }
+}
+
+@media screen and (max-width: 600px) {
+    ul.posts { margin-left: .5em !important; list-style-type: disc !important; list-style-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIj48dGV4dCB4PSIyIiB5PSIxMi41IiBzdHlsZT0iZm9udC1zaXplOiAxNnB0OyBmaWxsOiAjNDQ0OyI+JiN4MjAyMjs8L3RleHQ+PC9zdmc+') !important; }
+    ul.posts time { display: none !important; }
+    ul.posts li { padding-left: 0 !important; }
+}
+@media screen and (max-width: 500px) {
+    p.pull-quote { display: none !important; }
+}

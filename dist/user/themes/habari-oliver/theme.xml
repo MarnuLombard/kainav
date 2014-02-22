@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pluggable type="theme">
+	<name>Oliver</name>
+	
+	<author url="http://elvery.net/drzax">Simon Elvery</author>
+	
+	<version>1.0</version>
+	<description><![CDATA[A minimalist theme for Habari.]]></description>
+
+	<copyright>2013</copyright>
+
+	<areas>
+		<area name="nav">
+			<description><![CDATA[A very small navigation area.]]></description>
+		</area>
+	</areas>
+	
+	<template_engine>rawphpengine</template_engine>
+	
+</pluggable>

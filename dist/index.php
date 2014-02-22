@@ -12,8 +12,10 @@
  * The path to the root of this Habari installation.
  */
 if ( !defined( 'HABARI_PATH' ) ) {
-	define( 'HABARI_PATH', dirname( __FILE__ ) );
+  define( 'HABARI_PATH', dirname( __FILE__ ) );
 }
+
+
 
 /**
  * Require system/index.php, where the magic happens

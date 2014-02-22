@@ -1,4 +1,4 @@
-<?php if ( !defined( 'HABARI_PATH' ) ) { die( 'No direct access' ); } 
+<?php if ( !defined( 'HABARI_PATH' ) ) { die( 'No direct access' ); }
 
 class Charcoal extends Theme
 {
@@ -67,7 +67,7 @@ class Charcoal extends Theme
 		$ui->set_option( 'success_message', _t( 'Options saved' ) );
 		$ui->out();
 	}
-	
+
 	/**
 	 * Execute on theme init to apply these filters to output
 	 */
@@ -82,7 +82,7 @@ class Charcoal extends Theme
 		// Add FormUI template placing the input before the label
 		$this->add_template( 'charcoal_text', dirname( __FILE__ ) . '/formcontrol_text.php' );
 	}
-	
+
 	/**
 	 * Add some variables to the template output
 	 */
@@ -92,7 +92,7 @@ class Charcoal extends Theme
 
 		// Use theme options to set values that can be used directly in the templates
 		$opts = Options::get_group( __CLASS__ );
-				
+
 		$this->assign( 'show_title_image', $opts['show_title_image'] );
 		$this->assign( 'home_label', $opts['home_label'] );
 		$this->assign( 'show_powered', $opts['show_powered'] );
@@ -102,7 +102,7 @@ class Charcoal extends Theme
 		$this->assign( 'page_class', 'post' . ( ! $opts['show_page_paperclip'] ? ' alt' : '' ) );
 		$this->assign( 'show_post_nav', $opts['show_post_nav'] );
 		$this->assign( 'loggedin', User::identify()->loggedin );
-		
+
 		$locale = Options::get( 'locale' );
 		if ( $this->get_url($locale . '.css') ) {
 			$this->assign( 'localized_css', $locale . '.css' );
@@ -120,7 +120,7 @@ class Charcoal extends Theme
 				$this->assign( 'title_image', 'images/sample-title.png' );
 			}
 		}
-		
+
 		if ( !$this->template_engine->assigned( 'pages' ) ) {
 			$this->assign( 'pages', Posts::get( 'page_list' ) );
 		}
@@ -138,7 +138,7 @@ class Charcoal extends Theme
 			}
 		}
 	}
-		
+
 	/**
 	 * Convert a post's tags array into a usable list of links
 	 *
@@ -171,7 +171,7 @@ class Charcoal extends Theme
 		foreach ( $keywords as $keyword ) {
 			$out[]= '<a href="' . Site::get_url( 'habari', true ) .'search?criteria=' . $keyword . '" title="' . _t( 'Search for ' ) . $keyword . '">' . $keyword . '</a>';
 		}
-		
+
 		if ( sizeof( $keywords ) > 1 ) {
 			if ( $has_results ) {
 				return _t( 'Search results for \'%s\'', array( implode( ' ', $out ) ) );
@@ -186,12 +186,12 @@ class Charcoal extends Theme
 		return _t( 'No results found for your search \'%s\'', array( $criteria ) );
 
 	}
-	
+
 	public function theme_search_form( $theme )
 	{
 		return $theme->fetch( 'searchform' );
 	}
-	
+
 	/**
 	 * Returns an unordered list of all used Tags
 	 */
@@ -215,7 +215,7 @@ class Charcoal extends Theme
 			$tags[$index]->url = URL::get( 'display_entries_by_tag', array( 'tag' => $tag->slug ) );
 		}
 		$theme->taglist = $tags;
-		
+
 		return $theme->fetch( 'taglist' );
 	}
 
@@ -241,24 +241,24 @@ class Charcoal extends Theme
 		$block_list['charcoal_menu'] = _t('Charcoal Menu');
 		return $block_list;
 	}
-	
+
 	/**
 	 * Produce a menu for the Charcoal menu block from all of the available pages
 	 */
 	public function action_block_content_charcoal_menu($block, $theme)
 	{
 		$menus = array('home' => array(
-			'link' => Site::get_url( 'habari' ), 
-			'title' => Options::get( 'title' ), 
-			'caption' => Options::get( 'Charcoal__home_label', _t( 'Blog' ) ), 
+			'link' => Site::get_url( 'habari' ),
+			'title' => Options::get( 'title' ),
+			'caption' => Options::get( 'Charcoal__home_label', _t( 'Blog' ) ),
 			'cssclass' => $theme->request->display_home ? 'current_page_item' : '',
 		));
 		$pages = Posts::get( 'page_list' );
 		foreach($pages as $page) {
 			$menus[] = array(
-				'link' => $page->permalink, 
-				'title' => $page->title, 
-				'caption' => $page->title, 
+				'link' => $page->permalink,
+				'title' => $page->title,
+				'caption' => $page->title,
 				'cssclass' => (isset($theme->post) && $theme->post->id == $page->id) ? 'current_page_item' : '',
 			);
 		}

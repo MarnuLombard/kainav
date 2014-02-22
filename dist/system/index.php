@@ -25,7 +25,7 @@ if ( !version_compare( PHP_VERSION, '5.3.3', '>=' ) ) {
 }
 
 // Increase the error reporting level: E_ALL, E_NOTICE, and E_STRICT
-error_reporting(E_ALL);
+error_reporting( E_ALL | E_NOTICE | E_STRICT );
 
 // set a default timezone for PHP. Habari will base off of this later on
 date_default_timezone_set( 'UTC' );
@@ -108,7 +108,7 @@ if ( Config::exists('db_connection') ) {
 			_t( "An error occurred" ), // H1 tag
 			( defined( 'DEBUG' ) && DEBUG == true ) ?
 				_t( "Unable to connect to database.  Error message: %s", array( $e->getMessage() ) ) :
-				_t( "Unable to connect to database." )
+				_t( "Unable to connect to database." ) 
 			// Error message, more detail if DEBUG is defined.
 		);
 
